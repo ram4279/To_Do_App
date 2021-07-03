@@ -1,0 +1,17 @@
+{% extends 'base/main.html' %}
+{% block content %}
+    <div class="header">
+        <h1><a href="{% url 'task-list'%}">&#8592;</a> Create Task</h1>
+    </div>
+    
+    <div class="form-container">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="addbtn">Add Task</button>
+        </form>
+    </div>
+
+    
+    
+{% endblock content%}
